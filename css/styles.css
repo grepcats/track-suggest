@@ -23,13 +23,17 @@ h3 {
   width: 95%;
 }
 
-#explore {
+#curious,
+#done {
   display:none;
   font-size: 1.25em;
   padding-top: 30px;
   margin:auto;
   text-align: center;
+}
 
+.form-group {
+  margin-top: 20px;
 }
 
 .thanks {

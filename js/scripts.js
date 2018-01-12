@@ -33,7 +33,9 @@ $(document).ready(function() {
     //find track with most number of responses & assign that to var winner
     var winner = "";
     var biggest = Math.max(csharp, mobile, ruby, design, php)
-    if (csharp === biggest) {
+    if (csharp === 0 && mobile === 0 && ruby === 0 && design === 0 & php === 0) {
+      winner = "dunno";
+    } else if (csharp === biggest) {
       winner = "csharp";
     } else if (mobile === biggest) {
       winner = "mobile";
@@ -44,7 +46,7 @@ $(document).ready(function() {
     } else if (php === biggest) {
       winner = "php";
     };
-
+    console.log(csharp+", "+mobile+", "+ruby+", "+design+", "+php)
     //hide previous result
     $(".result").hide();
     $(".thanks").remove();
@@ -53,16 +55,22 @@ $(document).ready(function() {
     $(".results").prepend("<p class='thanks'>Thanks, "+name+"! You should try...");
 
     //show winner
-    $("#"+winner).show();
-    $("#explore").show();
+    $("#"+winner).slideDown();
+    $("#curious").show();
 
     //show option for users to explore other tracks
-    $(".clickable").click(function() {
-      $(".result").show();
+    $(".showOther").click(function() {
+      $(".result").slideDown();
+      $("#done").show();
       $("#dunno").hide();
-      $("#explore").hide();
+      $("#curious").hide();
       $(".thanks").hide();
     });
+
+    $(".goBack").click(function() {
+      $(".result").slideUp();
+      $("#done").hide();
+    })
 
     event.preventDefault();
   });
