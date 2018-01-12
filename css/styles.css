@@ -11,3 +11,13 @@ h3 {
 .form-control {
   width: 300px;
 }
+
+.result {
+  display:none;
+}
+
+.thanks {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 30px;
+}
