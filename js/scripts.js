@@ -29,7 +29,7 @@ $(document).ready(function() {
     } else if ((companyInput === "large" || companyInput === "medium") && (osInput === "windows" || osInput === "dunno") && (scenarioInput === "csharp" || scenarioInput === "ruby" || scenarioInput === php)) {
       $("#csharp").slideDown();
       $("#explore").show();
-    } else if (companyInput === "design" || interfaceInput !== "No") {
+    } else if (companyInput === "design" && interfaceInput !== "No") {
       $("#design").slideDown();
       $("#explore").show();
     } else if ((companyInput === "small" || companyInput === "medium") && osInput !== "windows" && mobileInput !== "Yes") {
