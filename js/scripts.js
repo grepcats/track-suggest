@@ -30,10 +30,20 @@ $(document).ready(function() {
       }
     });
 
-    var newItems = [csharp, mobile, ruby, design, php];
-
-    //at this point i have an array of numbers but i'm not sure how to select the largest one while also knowing the identity of it in the list. maybe this is a job for dictionaries? also what happens if there's a tie?
-
+    //find track with most number of responses & assign that to var winner
+    var winner = "";
+    var biggest = Math.max(csharp, mobile, ruby, design, php)
+    if (csharp === biggest) {
+      winner = "csharp";
+    } else if (mobile === biggest) {
+      winner = "mobile";
+    } else if (ruby === biggest) {
+      winner = "ruby";
+    } else if (design === biggest) {
+      winner = "design";
+    } else if (php === biggest) {
+      winner = "php";
+    };
 
     //hide previous result
     $(".result").hide();
@@ -41,6 +51,10 @@ $(document).ready(function() {
 
     //add "thanks" to result set
     $(".results").prepend("<p class='thanks'>Thanks, "+name+"! You should try...");
+
+    //show winner
+    $("#"+winner).show();
+    $("#explore").show();
 
     //show option for users to explore other tracks
     $(".clickable").click(function() {

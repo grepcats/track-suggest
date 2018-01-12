@@ -13,7 +13,7 @@ h3 {
 }
 
 .result {
-  display:none;
+  display: none;
   border: 1px dotted pink;
   border-radius: 20px;
   padding-left: 20px;
