@@ -13,7 +13,7 @@ h3 {
 }
 
 .result {
-  
+  display:none;
   border: 1px dotted pink;
   border-radius: 20px;
   padding-left: 20px;
@@ -45,4 +45,8 @@ h3 {
 .clickable:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.btn {
+  margin-bottom:30px;
 }

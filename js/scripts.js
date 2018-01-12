@@ -18,28 +18,28 @@ $(document).ready(function() {
     $(".results").prepend("<p class='thanks'>Thanks, "+name+"! You should try...");
 
     if (scenarioInput === "dunno") {
-      $("#dunno").show();
+      $("#dunno").slideDown();
       $("#explore").show();
     } else if (interfaceInput !== "No" && scenarioInput === "design") {
-      $("#design").show();
+      $("#design").slideDown();
       $("#explore").show();
     } else if ((mobileInput === "Yes" || mobileInput === "Maybe") && osInput === "android" && scenarioInput === "mobile") {
-      $("#java").show();
+      $("#java").slideDown();
       $("#explore").show();
     } else if ((companyInput === "large" || companyInput === "medium") && (osInput === "windows" || osInput === "dunno") && (scenarioInput === "csharp" || scenarioInput === "ruby" || scenarioInput === php)) {
-      $("#csharp").show();
+      $("#csharp").slideDown();
       $("#explore").show();
     } else if (companyInput === "design" || interfaceInput !== "No") {
-      $("#design").show();
+      $("#design").slideDown();
       $("#explore").show();
     } else if ((companyInput === "small" || companyInput === "medium") && osInput !== "windows" && mobileInput !== "Yes") {
-      $("#ruby").show();
+      $("#ruby").slideDown();
       $("#explore").show();
     } else if (scenarioInput === "php" && mobileInput !== No) {
-      $("#php").show();
+      $("#php").slideDown();
       $("#explore").show();
     } else {
-      $("#dunno").show();
+      $("#dunno").slideDown();
       $("#explore").show();
     }
 
