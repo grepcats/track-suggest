@@ -9,14 +9,6 @@
     <title>Track Selector</title>
   </head>
   <body>
-    <!--Questions:
-    What kind of company do you want to work for?
-    What is your preferred OS?
-    How important is Open Source technology to you?
-    Is your goal to do mobile development?
-    Would you call yourself "artistic"?
-    Would you like to be in charge of creating better, more intuitive interfaces for users?
-    -->
     <div class="container">
       <h1>Epicodus Track Selector</h1>
       <p>You have many options to choose from when considering a track at Epicodus. This short quiz will help steer you in a direction most suitable to your interests.</p>
@@ -30,19 +22,19 @@
           <h3>What kind of company would you like to work for?</h3>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="large">
+              <input type="radio" name="company" value="csharp">
               Big corporation
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="medium">
+              <input type="radio" name="company" value="php">
               Established, medium-sized company
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="small">
+              <input type="radio" name="company" value="ruby">
               Small startup
             </label>
           </div>
@@ -50,6 +42,12 @@
             <label class="multiple-choice">
               <input type="radio" name="company" value="design">
               Design firm or agency
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="mobile">
+              A company building lots of mobile apps
             </label>
           </div>
           <div>
@@ -63,32 +61,26 @@
           <h3>What is your preferred operating system?</h3>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="windows">
+              <input type="radio" name="os" value="csharp">
               Windows
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="linux">
-              Linux
+              <input type="radio" name="os" value="ruby">
+              Linux or Mac
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="mac">
-              Mac
-            </label>
-          </div>
-          <div>
-            <label class="multiple-choice">
-              <input type="radio" name="os" value="android">
+              <input type="radio" name="os" value="mobile">
               Android
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="dunno">
-              No preference
+              <input type="radio" name="os" value="php">
+              Don't care
             </label>
           </div>
         </div>
@@ -114,7 +106,7 @@
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="scenario" value="java">
+              <input type="radio" name="scenario" value="mobile">
               Building mobile applications.
             </label>
           </div>
@@ -135,18 +127,18 @@
           <label for="mobile">Would you like to do mobile development?</label>
           <select class="form-control" id="mobile">
             <option></option>
-            <option>Yes</option>
+            <option value="mobile">Yes</option>
             <option>No</option>
-            <option>Maybe</option>
+            <option value="php">Maybe</option>
           </select>
         </div>
         <div class="interface form-group">
           <label for="interface">Would you like to be in charge of designing better, more intuitive interfaces for users?</label>
           <select class="form-control" id="interface">
             <option></option>
-            <option>Yes</option>
+            <option value="design">Yes</option>
             <option>No</option>
-            <option>Maybe</option>
+            <option value="design">Maybe</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
