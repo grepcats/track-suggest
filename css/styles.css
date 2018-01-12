@@ -12,7 +12,8 @@ h3 {
   width: 300px;
 }
 
-.result {
+.result,
+#explore {
   display:none;
 }
 
@@ -20,4 +21,14 @@ h3 {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 30px;
+}
+
+.clickable {
+  font-weight: bold;
+  color: pink;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
