@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   $("form#track-quiz").submit(function(event) {
     var name = $("#name").val();
@@ -8,8 +7,46 @@ $(document).ready(function() {
     var mobileInput = $("#mobile").val();
     var interfaceInput = $("#interface").val();
 
-    console.log(name+", "+companyInput+", "+osInput+", "+scenarioInput+", "+mobileInput+", "+interfaceInput);
+    //create array and set iteration variables
+    var items = [companyInput, osInput, scenarioInput, mobileInput, interfaceInput];
+    var csharp = 0;
+    var mobile = 0;
+    var ruby = 0;
+    var design = 0;
+    var php = 0;
 
+    //count items in the array
+    items.forEach(function(item) {
+      if (item === "csharp") {
+        csharp++;
+      } else if (item === "mobile") {
+        mobile++;
+      } else if (item === "ruby") {
+        ruby++;
+      } else if (item === "design") {
+        design++;
+      } else if (item === "php") {
+        php++;
+      }
+    });
+
+    //find track with most number of responses & assign that to var winner
+    var winner = "";
+    var biggest = Math.max(csharp, mobile, ruby, design, php)
+    if (csharp === 0 && mobile === 0 && ruby === 0 && design === 0 & php === 0) {
+      winner = "dunno";
+    } else if (csharp === biggest) {
+      winner = "csharp";
+    } else if (mobile === biggest) {
+      winner = "mobile";
+    } else if (ruby === biggest) {
+      winner = "ruby";
+    } else if (design === biggest) {
+      winner = "design";
+    } else if (php === biggest) {
+      winner = "php";
+    };
+    console.log(csharp+", "+mobile+", "+ruby+", "+design+", "+php)
     //hide previous result
     $(".result").hide();
     $(".thanks").remove();
@@ -17,38 +54,24 @@ $(document).ready(function() {
     //add "thanks" to result set
     $(".results").prepend("<p class='thanks'>Thanks, "+name+"! You should try...");
 
-    if (scenarioInput === "dunno") {
-      $("#dunno").slideDown();
-      $("#explore").show();
-    } else if (interfaceInput !== "No" && scenarioInput === "design") {
-      $("#design").slideDown();
-      $("#explore").show();
-    } else if ((mobileInput === "Yes" || mobileInput === "Maybe") && osInput === "android" && scenarioInput === "mobile") {
-      $("#java").slideDown();
-      $("#explore").show();
-    } else if ((companyInput === "large" || companyInput === "medium") && (osInput === "windows" || osInput === "dunno") && (scenarioInput === "csharp" || scenarioInput === "ruby" || scenarioInput === php)) {
-      $("#csharp").slideDown();
-      $("#explore").show();
-    } else if (companyInput === "design" && interfaceInput !== "No") {
-      $("#design").slideDown();
-      $("#explore").show();
-    } else if ((companyInput === "small" || companyInput === "medium") && osInput !== "windows" && mobileInput !== "Yes") {
-      $("#ruby").slideDown();
-      $("#explore").show();
-    } else if (scenarioInput === "php" && mobileInput !== No) {
-      $("#php").slideDown();
-      $("#explore").show();
-    } else {
-      $("#dunno").slideDown();
-      $("#explore").show();
-    }
+    //show winner
+    $("#"+winner).slideDown();
+    $("#curious").show();
 
-    $(".clickable").click(function() {
-      $(".result").show();
+    //show option for users to explore other tracks
+    $(".showOther").click(function() {
+      $(".result").slideDown();
+      $("#done").show();
       $("#dunno").hide();
-      $("#explore").hide();
+      $("#curious").hide();
       $(".thanks").hide();
     });
+
+    $(".goBack").click(function() {
+      $(".result").slideUp();
+      $("#done").hide();
+    })
+
     event.preventDefault();
   });
 

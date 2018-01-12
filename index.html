@@ -10,8 +10,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>Epicodus Track Selector</h1>
-      <p>You have many options to choose from when considering a track at Epicodus. This short quiz will help steer you in a direction most suitable to your interests.</p>
+      <div class="jumbotron">
+        <h1>Epicodus Track Selector</h1>
+        <p>You have many options to choose from when considering a track at Epicodus. This short quiz will help steer you in a direction most suitable to your interests.</p>
+      </div>
+
       <form id="track-quiz">
         <div class="name form-group">
           <label for="name">What is your name?</label>
@@ -21,19 +24,19 @@
           <h3>What kind of company would you like to work for?</h3>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="large">
+              <input type="radio" name="company" value="csharp">
               Big corporation
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="medium">
+              <input type="radio" name="company" value="php">
               Established, medium-sized company
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="company" value="small">
+              <input type="radio" name="company" value="ruby">
               Small startup
             </label>
           </div>
@@ -41,6 +44,12 @@
             <label class="multiple-choice">
               <input type="radio" name="company" value="design">
               Design firm or agency
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="mobile">
+              A company building lots of mobile apps
             </label>
           </div>
           <div>
@@ -54,32 +63,26 @@
           <h3>What is your preferred operating system?</h3>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="windows">
+              <input type="radio" name="os" value="csharp">
               Windows
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="linux">
-              Linux
+              <input type="radio" name="os" value="ruby">
+              Linux or Mac
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="mac">
-              Mac
-            </label>
-          </div>
-          <div>
-            <label class="multiple-choice">
-              <input type="radio" name="os" value="android">
+              <input type="radio" name="os" value="mobile">
               Android
             </label>
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="os" value="dunno">
-              No preference
+              <input type="radio" name="os" value="php">
+              Don't care
             </label>
           </div>
         </div>
@@ -105,7 +108,7 @@
           </div>
           <div>
             <label class="multiple-choice">
-              <input type="radio" name="scenario" value="java">
+              <input type="radio" name="scenario" value="mobile">
               Building mobile applications.
             </label>
           </div>
@@ -123,21 +126,21 @@
           </div>
         </div>
         <div class="mobile form-group">
-          <label for="mobile">Would you like to do mobile development?</label>
-          <select class="form-control" id="mobile">
+          <label for="mobile-dev">Would you like to do mobile development?</label>
+          <select class="form-control" id="mobile-dev">
             <option></option>
-            <option>Yes</option>
+            <option value="mobile">Yes</option>
             <option>No</option>
-            <option>Maybe</option>
+            <option value="php">Maybe</option>
           </select>
         </div>
         <div class="interface form-group">
           <label for="interface">Would you like to be in charge of designing better, more intuitive interfaces for users?</label>
           <select class="form-control" id="interface">
             <option></option>
-            <option>Yes</option>
+            <option value="design">Yes</option>
             <option>No</option>
-            <option>Maybe</option>
+            <option value="design">Maybe</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -156,7 +159,7 @@
               <li><a href="https://www.epicodus.com/c-sharp" target="_blank">C# at Epicodus</a></li>
             </ul>
         </div>
-        <div id="java" class="result">
+        <div id="mobile" class="result">
           <h2>Java/Android</h2>
           <p>Java is one of the most popular programming languages and would be an attractive addition to your resume. It's versitile - you can see it used in any number of applications and in many different kinds of organizations. It is also the language of choice for Android mobile app development, making it an important language to learn if you are interested in developing for mobile.</p>
           <p>Android is a mobile operating system developed by Google. The majority of mobile users are using Android devices, making this track a solid option for employment opportunities.</p>
@@ -210,8 +213,11 @@
           <h2>Thinking about it some more!</h2>
           <p>Keep doing research to decide what kinds of languages might be interesting to you! You can also start the <a href="https://www.epicodus.com/intro-to-programming/" target="_blank">Intro to Programming</a> class to get a head-start while you try to decide.</p>
         </div>
-        <div id="explore">
-          <p>Curious about the other tracks? <span class="clickable">Click here</span> to explore!</p>
+        <div id="curious">
+          <p>Curious about the other tracks? <span class="showOther clickable">Click here</span> to explore!</p>
+        </div>
+        <div id="done">
+          <p>All done? <span class="goBack clickable">Go back to quiz</span>!</p>
         </div>
       </div>
 

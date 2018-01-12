@@ -13,7 +13,7 @@ h3 {
 }
 
 .result {
-  display:none;
+  display: none;
   border: 1px dotted pink;
   border-radius: 20px;
   padding-left: 20px;
@@ -23,13 +23,17 @@ h3 {
   width: 95%;
 }
 
-#explore {
+#curious,
+#done {
   display:none;
   font-size: 1.25em;
   padding-top: 30px;
   margin:auto;
   text-align: center;
+}
 
+.form-group {
+  margin-top: 20px;
 }
 
 .thanks {
