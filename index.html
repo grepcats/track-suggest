@@ -21,16 +21,80 @@
       <h1>Epicodus Track Selector</h1>
       <p>You have many options to choose from when considering a track at Epicodus. This short quiz will help steer you in a direction most suitable to your interests.</p>
 
-      <div class="quiz">
-        <form id="track-quiz">
-          <div class="form-group">
-            <label for="name">What is your name?</label>
-            <input id="name" type="text" class="form-control">
+      <form id="track-quiz">
+        <div class="form-group">
+          <label for="name">What is your name?</label>
+          <input id="name" type="text" class="form-control">
+        </div>
+        <div class="company">
+          <h3>What kind of company would you like to work for?</h3>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="large">
+              Big corporation
+            </label>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="medium">
+              Established, medium-sized company
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="small">
+              Small startup
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="design">
+              Design firm or agency
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="company" value="dunno">
+              Don't know
+            </label>
+          </div>
+        </div>
+        <h3>What is your preferred operating system?</h3>
+        <div class="os">
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="os" value="windows">
+              Windows
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="os" value="linux">
+              Linux
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="os" value="mac">
+              Mac
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="os" value="android">
+              Android
+            </label>
+          </div>
+          <div>
+            <label class="multiple-choice">
+              <input type="radio" name="os" value="dunno">
+              No preference
+            </label>
+          </div>
+        </div>
 
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
