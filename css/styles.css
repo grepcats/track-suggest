@@ -12,14 +12,28 @@ h3 {
   width: 300px;
 }
 
-.result,
+.result {
+  
+  border: 1px dotted pink;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin:auto;
+  margin-top: 20px;
+  width: 95%;
+}
+
 #explore {
   display:none;
+  font-size: 1.25em;
+  padding-top: 30px;
+  margin:auto;
+  text-align: center;
+
 }
 
 .thanks {
   font-size: 1.5em;
-  font-weight: bold;
   margin-top: 30px;
 }
 
