@@ -35,6 +35,9 @@ $(document).ready(function() {
     } else if ((companyInput === "small" || companyInput === "medium") && osInput !== "windows" && mobileInput !== "Yes") {
       $("#ruby").show();
       $("#explore").show();
+    } else if (scenarioInput === "php" && mobileInput !== No) {
+      $("#php").show();
+      $("#explore").show();
     } else {
       $("#dunno").show();
       $("#explore").show();
