@@ -4,11 +4,12 @@ $(document).ready(function() {
     var companyInput = $("input:radio[name=company]:checked").val();
     var osInput = $("input:radio[name=os]:checked").val();
     var scenarioInput = $("input:radio[name=scenario]:checked").val();
-    var mobileInput = $("#mobile").val();
+    var mobileInput = $("#mobile-dev").val();
     var interfaceInput = $("#interface").val();
 
     //create array and set iteration variables
     var items = [companyInput, osInput, scenarioInput, mobileInput, interfaceInput];
+    console.log(mobileInput);
     var csharp = 0;
     var mobile = 0;
     var ruby = 0;

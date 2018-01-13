@@ -1,3 +1,24 @@
+body {
+  background-color: #00695c;
+}
+
+.jumbotron {
+  background-color: #003d33;
+  color: #ffffff
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+a {
+  color: #439889;
+}
+
+a:hover {
+  color: #003d33;
+}
+
 h3 {
   font-size: 1em;
   color: #333;
@@ -14,7 +35,7 @@ h3 {
 
 .result {
   display: none;
-  border: 1px dotted pink;
+  border: 1px dotted #439889;
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -43,12 +64,13 @@ h3 {
 
 .clickable {
   font-weight: bold;
-  color: pink;
+  color: #439889;
 }
 
 .clickable:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: #003d33;
 }
 
 .btn {
