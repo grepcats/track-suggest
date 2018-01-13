@@ -9,12 +9,13 @@ $(document).ready(function() {
 
     //create array and set iteration variables
     var items = [companyInput, osInput, scenarioInput, mobileInput, interfaceInput];
-    console.log(mobileInput);
+
     var csharp = 0;
     var mobile = 0;
     var ruby = 0;
     var design = 0;
     var php = 0;
+    var dunno = 0;
 
     //count items in the array
     items.forEach(function(item) {
@@ -28,13 +29,15 @@ $(document).ready(function() {
         design++;
       } else if (item === "php") {
         php++;
+      } else if (item === "dunno") {
+        dunno++;
       }
     });
 
     //find track with most number of responses & assign that to var winner
     var winner = "";
-    var biggest = Math.max(csharp, mobile, ruby, design, php)
-    if (csharp === 0 && mobile === 0 && ruby === 0 && design === 0 & php === 0) {
+    var biggest = Math.max(csharp, mobile, ruby, design, php, dunno)
+    if ((csharp === 0 && mobile === 0 && ruby === 0 && design === 0 & php === 0) || dunno === biggest) {
       winner = "dunno";
     } else if (csharp === biggest) {
       winner = "csharp";
@@ -47,7 +50,7 @@ $(document).ready(function() {
     } else if (php === biggest) {
       winner = "php";
     };
-    console.log(csharp+", "+mobile+", "+ruby+", "+design+", "+php)
+
     //hide previous result
     $(".result").hide();
     $(".thanks").remove();
@@ -68,6 +71,7 @@ $(document).ready(function() {
       $(".thanks").hide();
     });
 
+    //hide results and go back to quiz
     $(".goBack").click(function() {
       $(".result").slideUp();
       $("#done").hide();
@@ -75,7 +79,4 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
-
-
-
 });

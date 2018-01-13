@@ -1,3 +1,5 @@
+/*****general******/
+
 body {
   background-color: #00695c;
 }
@@ -19,6 +21,8 @@ a:hover {
   color: #003d33;
 }
 
+/*****form*****/
+
 h3 {
   font-size: 1em;
   color: #333;
@@ -32,6 +36,16 @@ h3 {
 .form-control {
   width: 300px;
 }
+
+.form-group {
+  margin-top: 20px;
+}
+
+.btn {
+  margin-bottom:30px;
+}
+
+/*****results*****/
 
 .result {
   display: none;
@@ -53,10 +67,6 @@ h3 {
   text-align: center;
 }
 
-.form-group {
-  margin-top: 20px;
-}
-
 .thanks {
   font-size: 1.5em;
   margin-top: 30px;
@@ -71,8 +81,4 @@ h3 {
   text-decoration: underline;
   cursor: pointer;
   color: #003d33;
-}
-
-.btn {
-  margin-bottom:30px;
 }
